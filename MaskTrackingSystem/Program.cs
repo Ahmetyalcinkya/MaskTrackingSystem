@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Business.Concretes;
 using Entities.Concretes;
 
 class Program
@@ -29,5 +30,8 @@ class Program
         person3.NationalIdentity = 33333333333;
         person3.DateOfBirthYear = 2000;
 
+
+        PttManager pttManager = new(new CitizenManager());
+        pttManager.GiveMask(person1);
     }
 }
